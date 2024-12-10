@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -50,19 +41,55 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBi3MELT3u4yY14uTVCYO1vDpm9PkLX_-g',
-    appId: '1:212640563016:android:d48810093ff1a32667bd7d',
-    messagingSenderId: '212640563016',
-    projectId: 'gemini-chat-bot-ad296',
-    storageBucket: 'gemini-chat-bot-ad296.appspot.com',
+    apiKey: 'AIzaSyBHSKIo_JWrb02jO_FbVpqiiLmtpX44rNE',
+    appId: '1:1060872274388:android:52add56998977138f99641',
+    messagingSenderId: '1060872274388',
+    projectId: 'gemini-chatbot-37502',
+    storageBucket: 'gemini-chatbot-37502.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDfBIF9q3SnsBMJ_uFHcCMDa1_7F8aseVM',
-    appId: '1:212640563016:ios:6866e72489678a3567bd7d',
-    messagingSenderId: '212640563016',
-    projectId: 'gemini-chat-bot-ad296',
-    storageBucket: 'gemini-chat-bot-ad296.appspot.com',
+    apiKey: 'AIzaSyBYq6ffqyoacGCPJ0Q8gTBSs9f3-AUdjqU',
+    appId: '1:1060872274388:ios:a8193d554b3658d3f99641',
+    messagingSenderId: '1060872274388',
+    projectId: 'gemini-chatbot-37502',
+    databaseURL: 'https://gemini-chatbot-37502-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'gemini-chatbot-37502.firebasestorage.app',
+    iosClientId: '1060872274388-ge18hb9hd9h3tmm4mfhohn2bg8up2vl2.apps.googleusercontent.com',
     iosBundleId: 'com.example.geminiChatBot',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBePNCj0S_QmBhpXe_vBCeMy4arTwP4zMc',
+    appId: '1:1060872274388:web:cc4cd5c635231581f99641',
+    messagingSenderId: '1060872274388',
+    projectId: 'gemini-chatbot-37502',
+    authDomain: 'gemini-chatbot-37502.firebaseapp.com',
+    databaseURL: 'https://gemini-chatbot-37502-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'gemini-chatbot-37502.firebasestorage.app',
+    measurementId: 'G-0M8XYB6C91',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyBYq6ffqyoacGCPJ0Q8gTBSs9f3-AUdjqU',
+    appId: '1:1060872274388:ios:a8193d554b3658d3f99641',
+    messagingSenderId: '1060872274388',
+    projectId: 'gemini-chatbot-37502',
+    databaseURL: 'https://gemini-chatbot-37502-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'gemini-chatbot-37502.firebasestorage.app',
+    iosClientId: '1060872274388-ge18hb9hd9h3tmm4mfhohn2bg8up2vl2.apps.googleusercontent.com',
+    iosBundleId: 'com.example.geminiChatBot',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBePNCj0S_QmBhpXe_vBCeMy4arTwP4zMc',
+    appId: '1:1060872274388:web:2be4c6a8028ede69f99641',
+    messagingSenderId: '1060872274388',
+    projectId: 'gemini-chatbot-37502',
+    authDomain: 'gemini-chatbot-37502.firebaseapp.com',
+    databaseURL: 'https://gemini-chatbot-37502-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'gemini-chatbot-37502.firebasestorage.app',
+    measurementId: 'G-YKEJ49483Q',
+  );
+
 }
